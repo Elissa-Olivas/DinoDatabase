@@ -11,10 +11,34 @@
     <ul>
       <li><a th:href="@{/}">Home</a></li>
       <li><a th:href="@{/dinosaurs}">Dinosaurs</a></li>
+      <li><a th:href="@{/fossils}">Fossils</a></li>
     </ul>
   </div>
 </head>
 <body>
+<div class="home-main-content">
+  <h1>Dinosaurs</h1>
+  <h2>A Dino Database</h2>
+  <p>Learn more about all the different dinosaurs and how fossils form.</p>
+  <div class="main-details">
+    <div class="card text-center" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="pic of dinos">
+      <div class="card-body">
+        <h5 class="card-title">Dinosaurs</h5>
+        <p class="card-text">Learn more about the different dinosaurs</p>
+        <a th:href="@{/dinosaurs}" class="btn btn-primary">Go to Dinos</a>
+      </div>
+    </div>
+    <div class="card text-center" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="pic of dinos">
+      <div class="card-body">
+        <h5 class="card-title">Fossils</h5>
+        <p class="card-text">Learn more about how fossils are formed</p>
+        <a th:href="@{/fossils}" class="btn btn-primary">Go to Fossils</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
