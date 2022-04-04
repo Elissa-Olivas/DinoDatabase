@@ -36,24 +36,29 @@ public class DinoController {
 
 
     //List of all dinosaurs
-    @RequestMapping("/dinosaurs")
+    @RequestMapping("/dinosaur/")
     public String allDinos(ModelMap modelMap) {
-        List<Dinosaur> dinosaurs = dinoRepository.getAllDinos();
-        modelMap.put("dinosaur", dinosaurs);
-        return "dinosaurs";
+        List<Dinosaur> dinosaur = dinoRepository.getAllDinos();
+//        List<Image> image = imageRepository.getALL_Images();
+        modelMap.put("dinosaur", dinosaur);
+//        modelMap.put("image", image);
+        return "dinosaur";
     }
 
 
     //Search Results
-    @RequestMapping("/dinosaurs/{dinoName}")
+    @RequestMapping("/dinosaur/{dinoName}")
     public String dinoByName(@PathVariable String dinoName, ModelMap modelMap) {
-        List<Dinosaur> dinosaurs = dinoRepository.getAllDinos();
-        modelMap.put("dinosaur", dinosaurs);
-        return "dinosaurs";
+        List<Dinosaur> dinoDetails = dinoRepository.returnName(dinoName);
+        modelMap.put("dinosaur", dinoDetails);
+        return "dinosaur-details";
     }
 
 
-
+    @RequestMapping("/fossils")
+    public String displayFossilDetails() {
+        return "fossils";
+    }
 
 
 }

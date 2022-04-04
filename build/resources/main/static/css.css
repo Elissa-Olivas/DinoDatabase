@@ -9,3 +9,26 @@
 .fossils-main-content {
     text-align: center;
 }
+
+nav ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #333;
+    /* position: fixed; - if you wanted the scroll bar to stay put while scrolling */
+}
+nav li {
+    float: left;
+    border-right: 2px solid #bbb; /* This creates a line sround the nav item*/
+}
+nav li:last-child {
+    border-right: none; /* This makes no border after the last item on the right*/
+}
+nav li a {
+    discplay: inline;
+    text-align: center;
+    color: white;
+    padding: 14px 16px;
+}
+nav li a:hover { /*This changes text when hovering over the nav item */
+    color: darkgoldenrod;
+}

@@ -23,7 +23,7 @@ class DinoRepositoryTest {
         DinoRepository dinoRepository = new DinoRepository();
         List<Dinosaur> results= dinoRepository.returnImageId("Brachiosaurus");
         for (Dinosaur dinosaur : results) {
-            assertTrue(dinosaur.getImageId().equals("Brachiosaurus"));
+            assertTrue(dinosaur.getImageName().equals("Brachiosaurus"));
         }
     }
 

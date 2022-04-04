@@ -23,13 +23,13 @@ public class DinoRepository {
     }
 
     public List<Dinosaur> returnImageId(String imageId) {
-        List<Dinosaur> imageIdSearch = new ArrayList<>();
+        List<Dinosaur> imageNameSearch = new ArrayList<>();
         for (Dinosaur dinosaur : ALL_DINOS) {
             if (dinosaur.getImageId().equals(imageId)) {
-                imageIdSearch.add(dinosaur);
+                imageNameSearch.add(dinosaur);
             }
         }
-        return imageIdSearch;
+        return imageNameSearch;
     }
 
 
