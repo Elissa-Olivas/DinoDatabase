@@ -12,12 +12,12 @@ public class ImageRepository {
 
 
     private static final List<Image> ALL_Images = Arrays.asList(
-            new Image("nameOfDino", "dino1"),
-            new Image("nameOfDino", "Dino2"),
-            new Image("nameOfDino", "Dino3"),
-            new Image("nameOfDino", "Dino4"),
-            new Image("nameOfDino", "Dino5"),
-            new Image("nameOfDino", "Dino6"));
+            new Image("Alectrosaurus", "Alectrosaurus"),
+            new Image("Allosaurus", "Allosaurus"),
+            new Image("Ankylosaurus", "Ankylosaurus"),
+            new Image("Brachiosaurus", "Brachiosaurus"),
+            new Image("Confuciusornis", "Confuciusornis"),
+            new Image("nameOfDino", "dino6"));
 
 
     public static List<Image> getALL_Images() {
