@@ -1,6 +1,36 @@
 .home-main-content {
     text-align: center;
 }
+.home-main-content .main-details * {
+    box-sizing: border-box;
+}
+
+/* Float four columns side by side */
+.home-main-content .main-details .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.home-main-content .main-details .row {
+    margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.home-main-content .main-details .row:after {
+    content: "";
+    display: inline-block;     /*table */
+    clear: both;
+}
+.home-main-content .main-details .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 16px;
+    border: 1px solid black;
+    margin: 10px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
 
 .dino-main-content {
     text-align: center;

@@ -3,17 +3,33 @@ package com.detroitlabs.DinoDatabase.model;
 public class Dinosaur {
     private String dinoName;
     private String pronunciation;
-    private int dietId;
-    private int eraId;
+    private String dietName;
+    private String eraName;
     private String imageId;
 
 
-    public Dinosaur(String dinoName, String pronunciation, int dietId, int eraId, String imageId) {
+    public Dinosaur(String dinoName, String pronunciation, String dietName, String eraName, String imageId) {
         this.dinoName = dinoName;
         this.pronunciation = pronunciation;
-        this.dietId = dietId;
-        this.eraId = eraId;
+        this.dietName = dietName;
+        this.eraName = eraName;
         this.imageId = imageId;
+    }
+
+    public String getDietName() {
+        return dietName;
+    }
+
+    public void setDietName(String dietName) {
+        this.dietName = dietName;
+    }
+
+    public String getEraName() {
+        return eraName;
+    }
+
+    public void setEraName(String eraName) {
+        this.eraName = eraName;
     }
 
     public String getDinoName() {
@@ -32,21 +48,7 @@ public class Dinosaur {
         this.pronunciation = pronunciation;
     }
 
-    public int getDietId() {
-        return dietId;
-    }
 
-    public void setDietId(int dietId) {
-        this.dietId = dietId;
-    }
-
-    public int getEraId() {
-        return eraId;
-    }
-
-    public void setEraId(int eraId) {
-        this.eraId = eraId;
-    }
 
     public String getImageId() {
         return imageId;

@@ -33,8 +33,8 @@ public class CategoryRepository {
 
 
     private static final List<Category> ERA_CATEGORIES = Arrays.asList(
-            new Category(4, "Late Cretaceous"),
-            new Category(5, "Late Jurassic"));
+            new Category(4, "Cretaceous"),
+            new Category(5, "Jurassic"));
 
 
     public static List<Category> getEraCategories() {

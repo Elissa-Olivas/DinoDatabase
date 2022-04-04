@@ -29,8 +29,8 @@
                     <div class="card-body">
                         <h5 th:href="'/Dinosaur/' + ${ListOfDinos.dinoName}" th:text="${ListOfDinos.dinoName}" class="card-title"></h5>
                         <h6 th:href="'/Dinosaur/' + ${ListOfDinos.pronunciation}" th:text="${ListOfDinos.pronunciation}"></h6>
-                        <p th:href="'/Dinosaur/' + ${ListOfDinos.dietId}" th:text="${ListOfDinos.dietId}" class="card-text"></p>     <!-- returns the idNumber and not the actual Category type -->
-                        <p th:href="'/Dinosaur/' + ${ListOfDinos.eraId}" th:text="${ListOfDinos.eraId}" class="card-text"></p>
+                        <p th:href="'/Dinosaur/' + ${ListOfDinos.dietName}" th:text="${ListOfDinos.dietName}" class="card-text"></p>     <!-- returns the idNumber and not the actual Category type -->
+                        <p th:href="'/Dinosaur/' + ${ListOfDinos.eraName}" th:text="${ListOfDinos.eraName}" class="card-text"></p>
                     </div>
                 </div>
             </div>

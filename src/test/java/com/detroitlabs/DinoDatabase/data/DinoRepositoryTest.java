@@ -23,7 +23,7 @@ class DinoRepositoryTest {
         DinoRepository dinoRepository = new DinoRepository();
         List<Dinosaur> results= dinoRepository.returnImageId("Brachiosaurus");
         for (Dinosaur dinosaur : results) {
-            assertTrue(dinosaur.getImageName().equals("Brachiosaurus"));
+            assertTrue(dinosaur.getImageId().equals("Brachiosaurus"));
         }
     }
 
@@ -48,9 +48,9 @@ class DinoRepositoryTest {
     @Test     //Pass
     void findByEraID() {
         DinoRepository dinoRepository = new DinoRepository();
-        List<Dinosaur> results= dinoRepository.findByEraID(4);
+        List<Dinosaur> results= dinoRepository.findByEraID("Cretaceous");
         for (Dinosaur dinosaur : results) {
-            assertTrue(dinosaur.getEraId() == 4);
+            assertTrue(dinosaur.getEraName().equals("Cretaceous"));
         }
 
     }
@@ -58,9 +58,9 @@ class DinoRepositoryTest {
     @Test      //Pass
     void findByDietID() {
         DinoRepository dinoRepository = new DinoRepository();
-        List<Dinosaur> results= dinoRepository.findByDietID(2);
+        List<Dinosaur> results= dinoRepository.findByDietID("Carnivore");
         for (Dinosaur dinosaur : results) {
-            assertTrue(dinosaur.getDietId() == 2);
+            assertTrue(dinosaur.getDietName().equals("Carnivore"));
         }
     }
 }

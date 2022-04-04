@@ -11,11 +11,11 @@ import java.util.List;
 public class DinoRepository {
 
     private static final List<Dinosaur> ALL_DINOS = Arrays.asList(
-            new Dinosaur("Alectrosaurus", "ah-LEK-tro-sore-us", 1, 4, "Alectrosaurus"),
-            new Dinosaur("Allosaurus", "AL-oh-saw-russ", 1, 5, "Allosaurus"),
-            new Dinosaur("Ankylosaurus", "an-KIE-loh-sore-us", 2, 4, "Ankylosaurus"),
-            new Dinosaur("Brachiosaurus", "BRAK-ee-oh-sore-us", 2, 5, "Brachiosaurus"),
-            new Dinosaur("Confuciusornis", "kon-few-shus-or-niss", 1, 4, "Confuciusornis"));
+            new Dinosaur("Alectrosaurus", "ah-LEK-tro-sore-us", "Carnivore", "Cretaceous", "Alectrosaurus"),
+            new Dinosaur("Allosaurus", "AL-oh-saw-russ", "Carnivore", "Jurassic", "Allosaurus"),
+            new Dinosaur("Ankylosaurus", "an-KIE-loh-sore-us", "Herbivor", "Cretaceous", "Ankylosaurus"),
+            new Dinosaur("Brachiosaurus", "BRAK-ee-oh-sore-us", "Herbivor", "Jurassic", "Brachiosaurus"),
+            new Dinosaur("Confuciusornis", "kon-few-shus-or-niss", "Carnivore", "Cretaceous", "Confuciusornis"));
 
 
     public static List<Dinosaur> getAllDinos() {
@@ -45,10 +45,10 @@ public class DinoRepository {
     }
 
 //ADDING IN A CATEGORY for ID- id == eraID
-    public List<Dinosaur> findByEraID(int id) {
+    public List<Dinosaur> findByEraID(String eraName) {
         List<Dinosaur> dinosByCategory = new ArrayList<>();
         for (Dinosaur dinosaur : ALL_DINOS) {
-            if (dinosaur.getEraId() == id) {
+            if (dinosaur.getEraName().equals(eraName)) {
                 dinosByCategory.add(dinosaur);
             }
         }
@@ -57,10 +57,10 @@ public class DinoRepository {
 
 
     //ADDING IN A CATEGORY for ID- id == eraID
-    public List<Dinosaur> findByDietID(int id) {
+    public List<Dinosaur> findByDietID(String dietName) {
         List<Dinosaur> dinosByCategory = new ArrayList<>();
         for (Dinosaur dinosaur : ALL_DINOS) {
-            if (dinosaur.getDietId() == id) {
+            if (dinosaur.getDietName().equals(dietName)) {
                 dinosByCategory.add(dinosaur);
             }
         }
