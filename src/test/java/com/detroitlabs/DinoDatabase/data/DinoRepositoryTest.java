@@ -39,10 +39,8 @@ class DinoRepositoryTest {
     @Test //PASS
     void searchResults() {
         DinoRepository dinoRepository = new DinoRepository();
-        List<Dinosaur> results = dinoRepository.searchResults("Ankylosaurus");
-        for (Dinosaur dinosaur : results) {
-            assertTrue(dinosaur.getDinoName().equals("Ankylosaurus"));
-        }
+        Dinosaur results = dinoRepository.searchResults("Ankylosaurus");
+        assertTrue(results.getDinoName().equals("Ankylosaurus"));
     }
 
     @Test     //Pass

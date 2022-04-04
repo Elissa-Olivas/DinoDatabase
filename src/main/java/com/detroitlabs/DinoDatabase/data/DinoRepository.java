@@ -69,13 +69,22 @@ public class DinoRepository {
 
     //    METHOD TO RETURN ALL GIFS WHOS NAME CONTAINS A SPECIFIED STRING
     //searches for a specific dino by name
-    public List<Dinosaur> searchResults(String dinoName) {
-        List<Dinosaur> searchDinoByName = new ArrayList<>();
+//    public List<Dinosaur> searchResults(String dinoName) {
+//        List<Dinosaur> searchDinoByName = new ArrayList<>();
+//        for (Dinosaur dinosaur : ALL_DINOS) {
+//            if (dinosaur.getDinoName().contains(dinoName)) {
+//                searchDinoByName.add(dinosaur);
+//            }
+//        }
+//        return searchDinoByName;
+//    }
+
+    public Dinosaur searchResults(String dinoName) {
         for (Dinosaur dinosaur : ALL_DINOS) {
             if (dinosaur.getDinoName().contains(dinoName)) {
-                searchDinoByName.add(dinosaur);
+                return dinosaur;
             }
         }
-        return searchDinoByName;
+        return null;
     }
 }

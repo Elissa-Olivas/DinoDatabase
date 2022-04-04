@@ -30,34 +30,27 @@
         </div>
     </div>
 </div>
-<div class="home-main-content">
-    <h1>Dinosaurs</h1>
-    <h2>A Dino Database</h2>
-    <p>Learn more about all the different dinosaurs and how fossils form.</p>
-    <img th:src="'/images/' + 'Dino.jpg'"/>
-    <div class="main-details">
-        <div class="row">
-            <div class="column">
-                <div class="card text-center" style="width: 18rem;">
-                    <img th:src="'/images/' + 'dinocardphoto.webp'" class="card-img-top" alt="pic of dinos">
-                    <div class="card-body">
-                        <h5 class="card-title">Dinosaurs</h5>
-                        <p class="card-text">Learn more about the different dinosaurs</p>
-                        <a th:href="@{/dinosaur}" class="btn btn-primary">Go to Dinos</a>
+<div class="dino-main-content">
+    <div class="dino-loop">
+        <div th:each="dinoDetails: ${dinoDetails}" >
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img class="dinoImage" th:src="@{'/images/' + ${dinoDetails.imageId} + '.jpeg'}" alt="image of a dinosaur" style="width: 220px;">
                     </div>
-                </div>
-                <div class="card text-center" style="width: 18rem;">
-                    <img th:src="'/images/' + 'fossil.jpeg'" class="card-img-top" alt="pic of dinos">
-                    <div class="card-body">
-                        <h5 class="card-title">Fossils</h5>
-                        <p class="card-text">Learn more about how fossils are formed</p>
-                        <a th:href="@{/fossils}" class="btn btn-primary">Go to Fossils</a>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 th:href="'/Dinosaur/' + ${dinoDetails.dinoName}" th:text="${dinoDetails.dinoName}" class="card-title"></h5>
+                            <h6 th:href="'/Dinosaur/' + ${dinoDetails.pronunciation}" th:text="${dinoDetails.pronunciation}"></h6>
+                            <p th:href="'/Dinosaur/' + ${dinoDetails.dietName}" th:text="'Diet: '+ ${dinoDetails.dietName}" class="card-text"></p>     <!-- returns the idNumber and not the actual Category type -->
+                            <p th:href="'/Dinosaur/' + ${dinoDetails.eraName}" th:text="'Era: ' + ${dinoDetails.eraName}" class="card-text"></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
+</div>
 </body>
 </html>

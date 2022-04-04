@@ -10,6 +10,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -36,7 +38,7 @@ public class DinoController {
 
 
     //List of all dinosaurs
-    @RequestMapping("/dinosaur/")
+    @RequestMapping("/dinosaur")
     public String allDinos(ModelMap modelMap) {
         List<Dinosaur> dinosaur = dinoRepository.getAllDinos();
 //        List<Image> image = imageRepository.getALL_Images();
@@ -60,5 +62,11 @@ public class DinoController {
         return "fossils";
     }
 
+    @RequestMapping(value = "/search", method = RequestMethod.GET)
+    public String displaySearchResults(@RequestParam("q") String q, ModelMap modelMap) {
+        Dinosaur dinoDetails = dinoRepository.searchResults(q);
+        modelMap.put("dinoDetails", dinoDetails);
+        return "search";
+    }
 
 }

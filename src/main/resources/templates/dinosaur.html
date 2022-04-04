@@ -16,26 +16,40 @@
         </nav>
 </head>
 <body>
+<div class="search-bar container">
+    <div class="row">
+        <div class="col s12">
+            <!-- <form action="#" method="get"> -->
+            <form action="search" method="get">
+                <div class="input-field">
+                    <input name="q" type="search" placeholder="Search dinosaurs..." required="required" autocomplete="off"/>
+                    <i class="material-icons">Search for a Dinosaur by Name</i>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 <div class="dino-main-content">
     <div class="dino-loop">
         <div th:each="ListOfDinos: ${dinosaur}" >
-        <!-- start of each card -->
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-<!--                    <img class="dinoImage" th:src="@{'/images/' + ${dinosaur.imageId} + '.jpeg'}" alt="image of a dinosaur">-->
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 th:href="'/Dinosaur/' + ${ListOfDinos.dinoName}" th:text="${ListOfDinos.dinoName}" class="card-title"></h5>
-                        <h6 th:href="'/Dinosaur/' + ${ListOfDinos.pronunciation}" th:text="${ListOfDinos.pronunciation}"></h6>
-                        <p th:href="'/Dinosaur/' + ${ListOfDinos.dietName}" th:text="${ListOfDinos.dietName}" class="card-text"></p>     <!-- returns the idNumber and not the actual Category type -->
-                        <p th:href="'/Dinosaur/' + ${ListOfDinos.eraName}" th:text="${ListOfDinos.eraName}" class="card-text"></p>
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img class="dinoImage" th:src="@{'/images/' + ${ListOfDinos.imageId} + '.jpeg'}" alt="image of a dinosaur" style="width: 220px;">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 th:href="'/Dinosaur/' + ${ListOfDinos.dinoName}" th:text="${ListOfDinos.dinoName}" class="card-title"></h5>
+                            <h6 th:href="'/Dinosaur/' + ${ListOfDinos.pronunciation}" th:text="${ListOfDinos.pronunciation}"></h6>
+                            <p th:href="'/Dinosaur/' + ${ListOfDinos.dietName}" th:text="'Diet: '+ ${ListOfDinos.dietName}" class="card-text"></p>
+                            <p th:href="'/Dinosaur/' + ${ListOfDinos.eraName}" th:text="'Era: ' + ${ListOfDinos.eraName}" class="card-text"></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 </div>
 </body>
