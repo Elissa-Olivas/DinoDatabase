@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.detroitlabs.DinoDatabase.data.DinoRepositoryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-04-05T19:19:25" hostname="Elissas-MacBook-Pro.local" time="0.02">
+<testsuite name="com.detroitlabs.DinoDatabase.data.DinoRepositoryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-04-06T22:00:03" hostname="Elissas-MacBook-Pro.local" time="0.013">
   <properties/>
-  <testcase name="getAllDinos()" classname="com.detroitlabs.DinoDatabase.data.DinoRepositoryTest" time="0.02"/>
+  <testcase name="getAllDinos()" classname="com.detroitlabs.DinoDatabase.data.DinoRepositoryTest" time="0.013"/>
   <system-out><![CDATA[Alectrosaurus
 Allosaurus
 Ankylosaurus

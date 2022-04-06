@@ -28,12 +28,15 @@ public class DinoController {
     @Autowired
     private CategoryRepository categoryRepository;
 
-
+//    @RequestMapping("/")
+//    public String displayIndex() {
+//        return "index";
+//    }
 
     //HOME PAGE
-    @RequestMapping("/")
+    @RequestMapping("/home")
     public String displayHome() {
-        return "index";
+        return "home";
     }
 
 
