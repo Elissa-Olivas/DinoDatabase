@@ -33,7 +33,7 @@ public class DinoController {
     //HOME PAGE
     @RequestMapping("/")
     public String displayHome() {
-        return "home";
+        return "index";
     }
 
 

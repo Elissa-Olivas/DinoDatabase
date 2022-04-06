@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.detroitlabs.DinoDatabase.data.DinoRepositoryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-04-04T21:49:40" hostname="Elissas-MacBook-Pro.local" time="0.013">
+<testsuite name="com.detroitlabs.DinoDatabase.data.DinoRepositoryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-04-05T19:19:25" hostname="Elissas-MacBook-Pro.local" time="0.02">
   <properties/>
-  <testcase name="searchResults()" classname="com.detroitlabs.DinoDatabase.data.DinoRepositoryTest" time="0.013"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="getAllDinos()" classname="com.detroitlabs.DinoDatabase.data.DinoRepositoryTest" time="0.02"/>
+  <system-out><![CDATA[Alectrosaurus
+Allosaurus
+Ankylosaurus
+Brachiosaurus
+Confuciusornis
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
