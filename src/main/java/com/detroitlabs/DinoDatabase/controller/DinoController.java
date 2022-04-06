@@ -28,20 +28,20 @@ public class DinoController {
     @Autowired
     private CategoryRepository categoryRepository;
 
-//    @RequestMapping("/")
-//    public String displayIndex() {
-//        return "index";
-//    }
+    @RequestMapping("/DinoDatabase")
+    public String displayIndex() {
+        return "index";
+    }
 
     //HOME PAGE
-    @RequestMapping("/home")
+    @RequestMapping("/DinoDatabase/home")
     public String displayHome() {
         return "home";
     }
 
 
     //List of all dinosaurs
-    @RequestMapping("/dinosaur")
+    @RequestMapping("/DinoDatabase/dinosaur")
     public String allDinos(ModelMap modelMap) {
         List<Dinosaur> dinosaur = dinoRepository.getAllDinos();
 //        List<Image> image = imageRepository.getALL_Images();
@@ -52,7 +52,7 @@ public class DinoController {
 
 
     //Search Results
-    @RequestMapping("/dinosaur/{dinoName}")
+    @RequestMapping("/DinoDatabase/dinosaur/{dinoName}")
     public String dinoByName(@PathVariable String dinoName, ModelMap modelMap) {
         List<Dinosaur> dinoDetails = dinoRepository.returnName(dinoName);
         modelMap.put("dinosaur", dinoDetails);
@@ -60,7 +60,7 @@ public class DinoController {
     }
 
 
-    @RequestMapping("/fossils")
+    @RequestMapping("/DinoDatabase/fossils")
     public String displayFossilDetails() {
         return "fossils";
     }
